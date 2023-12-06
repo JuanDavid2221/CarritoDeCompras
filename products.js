@@ -26,6 +26,6 @@ const fruits=[
     {id:"fruit-26",product: 'HAYABUSA', price: 1.586, image: '/img/hayabusa.jpg'},
     {id:"fruit-26",product: 'KAWASAKI', price: 1.586, image: '/img/KAWASAKIZH2.jpg'},
     {id:"fruit-27",product: '400 KTR', price: 1.586, image: '/img/KAWASAKI400.jpg'},
-    {id:"fruit-28",product: 'Z1000', price: 1.586, image: '/img/z1000.jpg'},
+    {id:"fruit-28",product: 'Z1000', price: 1.586, image: '/img/z1000https://github.com/gokev06/carrito.git.jpg'},
 ];
 
