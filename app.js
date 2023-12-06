@@ -1,25 +1,56 @@
 const containerCards = document.getElementById('container-cards');
 const selectProducts=document.getElementById('select-products');
+ const btnCreate= document.getElementById('btn-create');
+let imgSelected= ""; 
+let idProduct= 0
 
-window.addEventListener('load', listSelect);
-selectProducts.addEventListener('change',renderCards)
+ const modal= document.querySelector('.modal');
+const closeModal= document.getElementById('close-modal');
+const newProduct= document.getElementById('new-product');
+const newPrice= document.getElementById('new-price');
+const newImage= document.getElementById('new-image'); 
+const btnNewProduct= document.getElementById('btn-new-create'); 
 
-function renderCards() {
-    fruits.map(fruit=> {fruit.product === selectProducts.value ? createCards(fruit) : null});
+window.addEventListener('load', card);
+btnCreate.addEventListener('click', showModal);
+btnNewProduct.addEventListener('click',createNewProduct);
+newImage.addEventListener('change',importImg);
 
+function importImg(event) {
+    const currentImg= event.target.files[0];
+    const objectURL= URL.createObjectURL(currentImg);
+    console.log(objectURL);
 }
 
-function listSelect() {
-    fruits.map(fruit =>{
-        const option= document.createElement('option');
-        option.value= fruit.product;
-        option.textContent = fruit.product;
-        selectProducts.appendChild(option);
-    });
+function createNewProduct() {
+    idProduct++;
+    const titleProduct= newProduct.value;
+    const priceProduct= newPrice.value;
+    const id= idProduct
+
+    const newFruit= {id:"fruit-10",product: titleProduct, price: priceProduct, image: imgSelected};
+
+    fruits.push(newFruit);
+    card();
+    modal.style.display='none';
 }
 
-function createCards(fruit) {
-    const{product,image, id, price}= fruit;
+ function showModal() {
+    modal.style.display= 'flex';
+} 
+function card() {
+    // Limpiar el contenedor antes de volver a agregar las tarjetas
+containerCards.innerHTML = "";
+
+// Iterar sobre cada elemento en la matriz cell y crear una tarjeta para cada uno
+fruits.forEach((fruits) => createCards(fruits));
+}
+
+
+
+
+function createCards(fruits) {
+    const{product,image, id, price}= fruits;
 
     const card= document.createElement('div');
     card.classList.add('card-product');

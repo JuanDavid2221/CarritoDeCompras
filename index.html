@@ -8,9 +8,16 @@
 </head>
 <body>
     <header><h1>Carrito de compras</h1></header>
-    <select name="" id="select-products">
-    <option value="select one option"></option>
-    </select>
+    <button id="btn-create">Agregar un producto</button>
+    <div class="container-products">
+  <div class="modal">
+        <button id="close-modal">X</button>
+        <input type="text" id="new-product" placeholder="products">
+        <input type="text" id="new-price" placeholder="price">
+        <input type="file" name="" id="new-image">
+        <button id="btn-new-create">create new object</button>
+    </div> 
+    </div>
     <main id="container-cards"></main>
     <script src="app.js"></script>
     <script src="products.js"></script>
