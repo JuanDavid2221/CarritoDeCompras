@@ -4,11 +4,20 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.0.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header><h1>Carrito de compras</h1></header>
+    <div class="hola">    <form action="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="Heading" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+    <input class="form-control col-md-7" id="input_buscar" name="busqueda" style="margin:0px" type="search" placeholder="   Buscardor">
+</form>
     <button id="btn-create">Agregar un producto</button>
+    <button id="btn-upload">Actualizar producto</button>
+</div>
     <div class="container-products">
   <div class="modal">
         <button id="close-modal">X</button>
@@ -17,6 +26,15 @@
         <input type="file" name="" id="new-image">
         <button id="btn-new-create">create new object</button>
     </div> 
+
+    <div class="modal-upload">
+        <button id="close-modal-upload">X</button>
+        <input type="text" id="id-product" placeholder="ingrese id del producto">
+        <button id="buscar-product">Buscar producto</button>
+        <input type="text" id="update-name" placeholder="Nombre Del producto">
+        <input type="text" id="update-price" placeholder="Precio">
+        <button id="btn-new-update">Actualizar producto</button>
+    </div>
     </div>
     <main id="container-cards"></main>
     <script src="app.js"></script>

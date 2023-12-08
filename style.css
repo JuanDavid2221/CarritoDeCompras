@@ -8,7 +8,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #033473;
+    background-color: rgb(140, 224, 22);
 }
 header{
     width: 100%;
@@ -80,6 +80,7 @@ main{
     background-color: #28930b;
     font-weight: 900;
 }
+.modal-upload,
 .modal{
     width: 20rem;
     height: 15rem;
@@ -93,6 +94,7 @@ main{
     z-index: 1;
     display: none;
 }
+.modal-upload > input,
 .modal > input{
     width: 10rem;
     height: 1.5rem;
@@ -109,12 +111,17 @@ main{
     font-size: 1rem;
     margin-left: 4rem;
 }
+
+.modal-upload > button:hover,
 .modal > button:hover,
+.modal-upload > button:focus,
 .modal > button:focus{
     background-color: #167d70;
     font-weight: 900;
     color: #ffff;
 }
+
+#close-modal-upload,
  #close-modal{
     width: 2rem;
     height: 2rem;
@@ -127,3 +134,28 @@ main{
     top: 1rem;
     right: 1rem;
  }
+
+ /* Estilos para el campo de búsqueda */
+#input_buscar {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-bottom: 20px;
+    /* Otros estilos según tu preferencia */
+}
+
+/* Estilos para los elementos filtrados */
+.card-product {
+    display: flex; /* Asegura que los elementos se muestren como bloques */
+    margin-bottom: 10px; /* Espacio entre elementos */
+    /* Otros estilos según tu diseño */
+}
+
+.hola{
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+
